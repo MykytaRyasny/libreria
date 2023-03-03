@@ -1,7 +1,3 @@
--- Video con las pruebas de que el proyecto funciona
-
-https://www.youtube.com/watch?v=US26ed6uylk
-
 -- Realización
 
 Proyecto realizado con IntelliJ Idea ya que Eclipse daba error en JPA Persistance ya que su última versión soportada por Eclipse es 2.2 y no funciona bien o directamente no funciona. IntelliJ Idea me permite trabajar con la versión jakarta persistance 3.0
