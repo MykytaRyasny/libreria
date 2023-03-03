@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="libreria_ada:war archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/libreria_ada_war_archive</output-path>
+    <root id="archive" name="libreria_ada_war archive.war">
+      <element id="artifact" artifact-name="libreria_ada:war" />
+    </root>
+  </artifact>
+</component>

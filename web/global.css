@@ -1,0 +1,327 @@
+div.container{
+    display: grid;
+    grid-template-columns: auto auto auto 10% 20%;
+    grid-template-rows: 200px 100px auto;
+    grid-template-areas:
+            "header header header header header"
+            "table table table carrito insertar"
+            "table table table login login"
+            "footer footer footer footer footer";
+}
+div.hora{
+    grid-area: footer;
+}
+
+div.login-form{
+    grid-area: login;
+}
+
+div.carrito{
+    grid-area: carrito;
+}
+div.carrito img{
+    height: 100px;
+    width: 100px;
+}
+div.insertar{
+    grid-area: insertar;
+}
+
+div.banner-container{
+    grid-area: header;
+    background-color: #00000d;
+    position: absolute;
+    width: 100%;
+}
+
+div.banner-container img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+td img{
+    width: 100px;
+    height: 100px;
+}
+
+div.tabla{
+    grid-area: table;
+}
+
+/* Hora footer */
+.hora-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.hora {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #555;
+    padding: 1rem;
+    background-color: #eee;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Login */
+.login {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button-container input[type="submit"], .button-container button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-container input[type="submit"]:hover, .button-container button:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Tabla de datos */
+.tablaLibreria table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.tablaLibreria th {
+    font-weight: bold;
+    background-color: #f8f8f8;
+    text-align: left;
+    padding: 1em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tablaLibreria td {
+    padding: 1em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tablaLibreria tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s ease-in-out;
+}
+
+.tablaLibreria td:nth-child(5) {
+    max-width: 100px;
+}
+
+.tablaLibreria img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.tablaLibreria img:hover {
+    transform: scale(1.1);
+}
+
+.tablaLibreria input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.75em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.5em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.25em;
+}
+
+.tablaLibreria input[type="submit"]:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tablaLibreria button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.75em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.5em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.25em;
+}
+
+.tablaLibreria button[type="submit"]:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.tablaLibreria tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+@media only screen and (max-width: 600px) {
+    .tablaLibreria table {
+        font-size: 0.8em;
+    }
+
+    .tablaLibreria th, .tablaLibreria td {
+        padding: 0.5em;
+    }
+
+    .tablaLibreria input[type="submit"] {
+        padding: 0.5em 0.75em;
+    }
+
+    .tablaLibreria th:nth-child(1),
+    .tablaLibreria td:nth-child(1) {
+        display: none;
+    }
+
+    .tablaLibreria th:nth-child(2),
+    .tablaLibreria td:nth-child(2) {
+        width: 40%;
+    }
+
+    .tablaLibreria th:nth-child(3),
+    .tablaLibreria td:nth-child(3) {
+        width: 20%;
+    }
+
+    .tablaLibreria th:nth-child(4),
+    .tablaLibreria td:nth-child(4) {
+        width: 20%;
+    }
+
+    .tablaLibreria th:nth-child(5),
+    .tablaLibreria td:nth-child(5) {
+        display: none;
+    }
+}
+
+
+/* numero de objetos del carrito */
+.carrito {
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.carrito span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.carrito img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.carrito:hover img {
+    transform: scale(1.1);
+}
+
+/* Tabla forms */
+
+.tabla form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.tabla label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.tabla input[type="text"],
+.tabla input[type="number"],
+.tabla input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.tabla button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.tabla button[type="submit"]:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
